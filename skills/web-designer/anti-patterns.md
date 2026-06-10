@@ -181,6 +181,46 @@ Every AI landing page has a blue-to-purple gradient. It's the beige of AI design
 }
 ```
 
+### 11. Emoji as Icons
+**What AI does:** 🚀 for "fast", ✨ for "AI-powered", 💡 for "smart", ⚡ for "performance" -- emoji dropped into feature cards as if they were an icon system.
+
+**What a designer does:**
+- Inline SVG icons with consistent stroke weight, sized to the type system
+- Large numbers (01, 02, 03) in the display face as the "icon"
+- Geometric shapes in the accent color
+- Nothing -- typography alone can carry a feature list
+
+### 12. The "Introducing ✨" Pill Badge
+**What AI does:** A small rounded-full pill above the hero headline reading "✨ Introducing AcmeAI" or "New: v2.0 is here →" -- on every single landing page, regardless of brand.
+
+**What a designer does:**
+- An editorial overline: small mono or caps label with letter-spacing, no pill, no border
+- Skips the announcement entirely if there's nothing to announce
+- If a badge is truly needed, designs it in the brand language (sharp corners on a brutalist site, a hand-drawn circle on a playful one)
+
+### 13. The Gradient-Clipped Headline
+**What AI does:** `background: linear-gradient(...); -webkit-background-clip: text;` on the hero headline, blue fading to purple, on a dark background with a purple glow behind it.
+
+**What a designer does:**
+- Solid color type at dramatic scale -- size and weight create the impact
+- Outlined/stroked text, mix-blend-mode inversion, or a single word in the accent color
+- If gradient text is genuinely on-brand, make the gradient unexpected (warm, subtle, or duotone within one hue)
+
+### 14. Glassmorphism on Everything
+**What AI does:** Every card gets `backdrop-filter: blur()` over a purple-glow background. Glass nav, glass cards, glass footer.
+
+**What a designer does:**
+- Reserves glass for AT MOST one element class (usually the fixed nav) where content actually scrolls beneath it
+- Uses solid surfaces, borders, or background-color shifts for cards
+- Remembers glass only reads as glass when there's something visually rich behind it
+
+### 15. Fake Social Proof
+**What AI does:** A row of overlapping avatar circles with "Trusted by 10,000+ developers", five gray ghost logos, a 4.9-star rating -- all invented.
+
+**What a designer does:**
+- Real client logos (or none), specific believable numbers, an actual quotation with a name
+- If no proof exists, uses confident copy and craft as the proof -- the design itself builds trust
+
 ## The Litmus Test
 
 Before shipping any design, ask:

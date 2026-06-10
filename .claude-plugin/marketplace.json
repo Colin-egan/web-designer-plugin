@@ -9,7 +9,7 @@
       "name": "web-designer",
       "source": "./",
       "description": "Transforms AI code generation into award-winning web design. 48 battle-tested patterns from the world's best-designed websites.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "Mickey Alton"
       },

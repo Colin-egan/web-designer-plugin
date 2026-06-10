@@ -49,6 +49,25 @@ When you receive a frontend task, run through this before writing any code:
 
 The **SIGNATURE** is critical. Every great site has one thing you remember. The outlined text on Chiara Luzzana. The magenta flash on page transitions. The 3D card tilt on SVZ. The museum-frame modal on Michael Kors. Your design must have a signature move.
 
+### Write the Brief Before the Code (mandatory)
+
+Before writing ANY code, state your design brief out loud to the user in 5-6 lines:
+
+```
+DIRECTION: [one phrase, e.g. "brutalist editorial with acid accents"]
+MOOD: [emotional register]
+PALETTE: [actual hex/oklch values, 2-4 colors with roles]
+TYPE: [display face + body face, by name]
+LAYOUT: [the structural idea in one sentence]
+SIGNATURE: [the one memorable move]
+```
+
+This is not ceremony. Stating choices before coding is what prevents silent regression to defaults -- if you skip the brief, you will drift back to Inter, violet gradients, and centered card grids without noticing.
+
+**Two commitment rules:**
+1. **Default to brave.** When torn between a safe option and a bold one, pick the bold one. The user invoked this skill because they want a designer, not a template.
+2. **Don't converge.** If you have designed something recently in this conversation, deliberately pick a DIFFERENT direction now. Dark portfolio is not the only answer. Rotate through: warm editorial, bold brand color, sophisticated light minimal, brutalist, retro, organic/handmade.
+
 ## Anti-Pattern Checklist
 
 Before finalizing ANY design, verify you have NOT fallen into these traps:
@@ -65,6 +84,11 @@ Before finalizing ANY design, verify you have NOT fallen into these traps:
 | All sections look the same | Create visual rhythm by alternating section treatments. Dark/light. Full-bleed/contained. Dense/spacious. |
 | Stock illustration style (Blush/unDraw aesthetic) | If using illustrations, make them specific. If you can't, use photography, typography, or abstract shapes instead. |
 | Buttons that all look like `bg-blue-500 rounded-lg` | Design buttons with character. Outlined, pill-shaped, text-only with animated underlines, full-width blocks -- match the design language. |
+| Emoji as feature icons (🚀 ✨ 💡 ⚡) | Inline SVG icons, large numbers (01/02/03) in the display face, geometric accent shapes, or nothing -- type can carry it. |
+| "✨ Introducing..." pill badge above the hero headline | An editorial overline (small caps/mono label with letter-spacing), or skip the announcement entirely. |
+| Gradient-clipped hero text (`background-clip: text`, blue→purple) | Solid type at dramatic scale. Outlined text. One word in the accent color. Scale and weight create impact, not gradients. |
+| Glassmorphic cards everywhere over a purple glow | Glass on AT MOST one element class (usually fixed nav). Solid surfaces and borders for everything else. |
+| Fake avatar circles + "Trusted by 10,000+ developers" | Real proof or no proof. Invented social proof reads as AI slop instantly. |
 
 ## How to Apply This Skill
 
@@ -145,6 +169,36 @@ body {
   html { scroll-behavior: smooth; }
 }
 ```
+
+## Craft Details (the floor, not the ceiling)
+
+Award-level work is dense with small decisions. Every deliverable must include:
+
+- **Every interactive element** has designed `:hover`, `:focus-visible`, and `:active` states -- not browser defaults. Wrap hover-only effects in `@media (hover: hover)`.
+- **`::selection`** styled to match the palette (accent background, readable text).
+- **Real copy, never lorem ipsum.** Invent specific, on-brand product names, headlines, and microcopy. "Lorem ipsum" hides hierarchy problems and screams placeholder.
+- **Contrast**: body text meets WCAG AA against its background. Bold design is never an excuse for unreadable text.
+- **Semantic HTML**: real `<nav>`, `<main>`, `<button>`, heading order. Designers who ship divs-for-buttons don't win awards.
+- **`prefers-reduced-motion`** fallback on every animation (see design-patterns.md #24).
+- **Page title + favicon** (an inline SVG favicon in the brand mark is a 2-line touch that signals craft).
+
+## Working Inside Frameworks
+
+This skill is not vanilla-HTML-only. Adapt:
+
+- **Tailwind**: Define the palette and type scale as design tokens (CSS variables or `theme` config) FIRST, then consume them. Use arbitrary values freely (`tracking-[-0.03em]`, `text-[clamp(3rem,10vw,8rem)]`). Never ship raw `blue-500`/`violet-600` as brand colors.
+- **React/Vue/Svelte**: Same decision framework applies per-component. Keep motion in CSS where possible; reach for Framer Motion/GSAP only for orchestrated sequences.
+- **Existing codebases**: When editing one component in an established design system, the brave move is coherence -- amplify the existing system's voice instead of imposing a new one. Find what the system does distinctively and push that further.
+
+## Final Self-Review (mandatory)
+
+Before delivering, re-read your output against the Anti-Pattern Checklist above and answer honestly:
+
+1. Which element here is the MOST generic? Redesign that one element now.
+2. Does the signature move actually appear in the code, or did it get lost during implementation?
+3. Strip the brand name out -- could this design belong to any company? If yes, it has no point of view yet.
+
+Only deliver after this pass.
 
 ## Required Reading
 

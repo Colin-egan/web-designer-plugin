@@ -5,6 +5,17 @@
 ### The One Rule
 **Commit to a constraint.** The most stunning websites use 2-3 colors max in their UI. The content (photography, illustrations, product images) provides the rest. Your UI palette should be a frame, not a painting.
 
+### Forbidden Default Hues
+
+These exact colors are the fingerprint of AI-generated UI. Never use them as your accent or brand color:
+
+- `#8B5CF6` / `#7C3AED` / `#A855F7` -- the Tailwind violet family every AI demo ships with
+- `#3B82F6` / `#2563EB` as a reflexive "primary blue" (it is fine ONLY when deliberately chosen, as in the Sophisticated Minimal archetype below)
+- `#667eea → #764ba2` and any blue-to-purple gradient
+- Raw Tailwind palette steps (`emerald-500`, `indigo-600`) used as brand colors without modification
+
+Instead, reach for hues with a point of view: oxblood, persimmon, chartreuse, cobalt, butter yellow, forest green, terracotta, ecru. Modern CSS tip: define palettes in `oklch()` -- perceptually uniform lightness makes hover/muted variants trivial (`oklch(from var(--accent) calc(l - 0.1) c h)`).
+
 ### Palette Archetypes
 
 Choose ONE archetype based on the project's mood. Do not mix archetypes.
@@ -115,6 +126,20 @@ Clean but not clinical. Used by Ready, Slite, Calm, Superlist.
 
 ## Typography Strategy
 
+### Fonts That Scream "AI Made This"
+
+These faces are not bad -- they are *defaults*. Their overuse in AI-generated frontends makes any design using them read as machine output. Never reach for them unless the user's existing codebase already uses them.
+
+| Overused (avoid) | Distinctive alternative (same role) |
+|---|---|
+| Inter, Roboto, Open Sans, Lato | Hanken Grotesk, Figtree, Schibsted Grotesk, Instrument Sans, Albert Sans |
+| Montserrat, Poppins, Raleway, Nunito | Space Grotesk, Bricolage Grotesque, Archivo (use the width axis), Syne, Sora |
+| Playfair Display | Fraunces, Instrument Serif, Libre Caslon Text, Newsreader, Cormorant Garamond |
+| Merriweather, Lora | Spectral, Source Serif 4, Crimson Pro |
+| Generic `monospace` | JetBrains Mono, IBM Plex Mono, Space Mono, Fragment Mono |
+
+All alternatives above are free on Google Fonts. Prefer variable fonts (weight/width/optical axes) -- they unlock weight animation and optical sizing for free.
+
 ### Font Pairing Formulas
 
 These are proven combinations. Use them as starting points, not defaults.
@@ -123,15 +148,15 @@ These are proven combinations. Use them as starting points, not defaults.
 Classic editorial. Timeless and versatile.
 ```css
 --font-display: 'Instrument Serif', 'Times New Roman', serif;
---font-body: 'Inter', 'Helvetica Neue', sans-serif;
+--font-body: 'Hanken Grotesk', 'Helvetica Neue', sans-serif;
 ```
 **Best for:** Editorial, luxury, content-heavy sites
 
-#### Formula 2: Geometric Sans + Humanist Sans
-Modern, clean, approachable.
+#### Formula 2: Characterful Grotesk + Quiet Body
+Modern and confident without being generic.
 ```css
---font-display: 'Montserrat', sans-serif;
---font-body: 'Open Sans', sans-serif;
+--font-display: 'Bricolage Grotesque', sans-serif;
+--font-body: 'Figtree', sans-serif;
 ```
 **Best for:** SaaS, corporate, professional services
 
@@ -155,7 +180,7 @@ Technical, editorial, distinctive.
 When the heading typeface IS the brand.
 ```css
 --font-display: 'Clash Display', 'Cabinet Grotesk', sans-serif;
---font-body: 'General Sans', 'Inter', sans-serif;
+--font-body: 'General Sans', 'Schibsted Grotesk', sans-serif;
 ```
 **Best for:** Portfolios, startups, bold brands
 
