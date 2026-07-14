@@ -35,6 +35,16 @@ A real photo or a well-built interaction pattern reads as more crafted than a gr
 - Sourcing real assets is in service of the signature idea, not a substitute for it. If pulling from these sites starts pulling the design toward *their* generic defaults rather than this brief's, stop and build the piece by hand instead.
 - Check license terms before use (Unsplash's license is broad but has some restrictions on standalone resale; uiverse components are typically MIT-licensed; Untitled UI's free tier is limited to specific sets) and say what you used and from where when you hand off the work.
 
+## Generating custom imagery
+
+Stock photography and off-the-shelf components cover a lot of ground, but some briefs need something that doesn't exist yet: a mascot or unique character, an illustrated style specific to the brand, or a logo mark that has to be exclusive to this business. For those, generate the asset instead of forcing a stock photo that almost fits or leaving a text-only placeholder where an image belongs.
+
+- If an image-generation tool or skill is available in your environment, use it to produce the bespoke asset — characters, hero illustrations, icons, a logo mark — rather than describing what the image should look like and leaving a gap in the page.
+- Art-direct the generation the way you'd art-direct a photographer, not with a generic prompt: specify the exact style (line art, painterly, geometric, photographic, risograph, claymation...), the palette (reuse the actual hex values from your token system), and the mood. A generated image that doesn't match the rest of the page's palette and type reads as more "AI slop" than a well-chosen stock photo would, because the mismatch is obvious.
+- Generate a few variations and choose deliberately. Image models default toward the same kind of generic choices language models do — smooth gradients, interchangeable corporate-friendly faces, oversaturated color, safe symmetric composition. Push back on those defaults the same way you push back on templated layouts and copy elsewhere in this skill.
+- A logo or mark meant to represent the brand long-term needs to hold up small and in one color — check it at favicon size and as a flat single-color mark before treating it as final.
+- Say what you generated and with which tool when you hand off the work, the same as you would for a sourced asset.
+
 ## Process: brainstorm, explore, plan, critique, build, critique again
 
 For calibration: AI-generated design right now clusters around three looks: (1) a warm cream background (near #F4F1EA) with a high-contrast serif display and a terracotta accent; (2) a near-black background with a single bright acid-green or vermilion accent; (3) a broadsheet-style layout with hairline rules, zero border-radius, and dense newspaper-like columns. All three are legitimate for some briefs, but they are defaults rather than choices, and they appear regardless of subject. Where the brief pins down a visual direction, follow it exactly — the brief's own words always win, including when it asks for one of these looks. Where it leaves an axis free, don't spend that freedom on one of these defaults. Just like a human designer who's hired, there's often a careful balance between doing what you're good at and taking each project as a chance to experiment and learn.

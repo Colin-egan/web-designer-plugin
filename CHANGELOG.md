@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.0 (2026-07-14)
+
+### frontend-design: generating custom imagery
+
+Adds a "Generating custom imagery" section to the `frontend-design` skill for briefs that need something no stock library has -- a unique mascot/character, a brand-specific illustration style, or an exclusive logo mark. Covers delegating to an available image-generation tool/skill, art-directing it with the page's own palette and style rather than a generic prompt, generating variations instead of accepting the first result, and checking a logo at favicon size/single color before finalizing it.
+
 ## 1.2.0 (2026-07-14)
 
 ### New skill: frontend-design
