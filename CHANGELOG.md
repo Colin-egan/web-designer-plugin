@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.0 (2026-07-14)
+
+### New skill: frontend-design
+
+Adds a second, standalone skill (`skills/frontend-design/SKILL.md`) for distinctive visual design work outside the full award-winning `web-designer` mode -- aesthetic direction, typography pairing, and a "Sourcing real assets" section covering how to pull real photography (Unsplash) and reference interaction patterns (uiverse.io, Untitled UI) without letting the borrowed material read as generic.
+
 ## 1.1.0 (2026-06-10)
 
 ### Design taste refresh
